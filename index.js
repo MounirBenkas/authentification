@@ -54,8 +54,9 @@ app.post("/users/login", async (req, res) => {
     // On recupére les erreur puis on les renvoi au client
     res.json(err);
   }
+  //Ajoute un token à l'utilisateur
   const token = jwt.sign({ name: user.name }, process.env.TOKEN_SECRET);
-  res.json({ token });
+  res.json({ token }); // Renvoi le token
 });
 
 app.listen(port, () => {
