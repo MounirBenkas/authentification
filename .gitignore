@@ -1,4 +1,4 @@
 node_modules
 request.rest
-./config/.env
-./config/database
+config/.env
+config/database
