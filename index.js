@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 
 const port = process.env.PORT || 3000;
-// const authVerification = require("./authentification");
 
 //Middleware
 app.use(express.json());

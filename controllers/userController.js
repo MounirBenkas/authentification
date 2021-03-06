@@ -2,6 +2,19 @@ const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+//Get Users
+module.exports.getUsers = async (req, res) => {
+  const getUser = await userModel
+    .find({}, (err, docs) => {
+      if (err) {
+        res.status(400).send(err);
+        return;
+      }
+      res.status(200).send(docs);
+    })
+    .select("-password");
+};
+
 //Register
 module.exports.register = async (req, res) => {
   const emailExist = await userModel.findOne({ email: req.body.email });

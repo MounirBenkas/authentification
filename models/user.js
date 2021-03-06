@@ -23,11 +23,11 @@ const userSchema = new mongoose.Schema(
     },
     bio: {
       type: String,
-      maxlength: 1000,
+      max: 1000,
     },
     avatar: {
       type: String,
-      defaut: "../public/img/avatar.png",
+      default: "./public/img/avatar.png",
     },
   },
   { timestamps: true }
