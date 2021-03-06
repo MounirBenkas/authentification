@@ -7,7 +7,6 @@ const userRoute = require("./routes/user");
 
 //Middleware
 app.use(express.json());
-//je teste
 
 //Routes
 app.use("/api/v1", userRoute);
