@@ -23,7 +23,6 @@ const userSchema = new mongoose.Schema(
     },
     bio: {
       type: String,
-      max: 1000,
     },
     avatar: {
       type: String,
