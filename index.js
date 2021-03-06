@@ -1,4 +1,5 @@
 require("dotenv").config({ path: "./config/.env" });
+require("./config/database");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
