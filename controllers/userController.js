@@ -17,7 +17,9 @@ module.exports.register = async (req, res) => {
   });
   try {
     const saveUser = await user.save();
-    res.status(200).json({ user: saveUser._id, message: "utilisateur créer" });
+    res
+      .status(200)
+      .json({ user_id: saveUser._id, message: "utilisateur créer" });
   } catch (err) {
     res.status(400).send(err);
   }
