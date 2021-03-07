@@ -12,7 +12,6 @@ module.exports.getUsers = async (req, res) => {
     })
     .select("-password");
 };
-
 //GetUserID
 module.exports.getUserId = async (req, res) => {
   const { id } = req.params;
@@ -23,7 +22,6 @@ module.exports.getUserId = async (req, res) => {
     res.status(200).json({ user: posts.pseudo });
   });
 };
-
 //GetUserUpdate
 module.exports.userUpdate = async (req, res) => {
   const { id } = req.params;

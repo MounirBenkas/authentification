@@ -3,7 +3,6 @@ const userSchema = new mongoose.Schema(
   {
     pseudo: {
       type: String,
-      unique: true,
       maxlength: 55,
       trim: true,
     },
