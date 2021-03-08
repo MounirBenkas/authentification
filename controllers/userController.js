@@ -17,7 +17,7 @@ module.exports.getUserId = async (req, res) => {
   const { id } = req.params;
   userModel.findById(id, (error, posts) => {
     if (error) {
-      res.status(400).send(err);
+      res.status(400).send(error);
     }
     res.status(200).json({ user: posts.pseudo });
   });
